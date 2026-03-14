@@ -17,7 +17,7 @@
 <!-- INTRO -->
 
 <div id="intro" class="intro">
-<h1 class="tudum">DAVID & THAINA</h1>
+<h1 class="tudum">NETFLIX</h1>
 </div>
 
 <audio id="tudumSound" src="images/tudum.mp3"></audio>
@@ -71,14 +71,11 @@ mas juntos descobrem o poder do amor verdadeiro.
 
 </p>
 
-
 <div class="botoes">
 
 <button class="assistir" onclick="assistir()">▶ Assistir</button>
 
 <button class="favorito">✓ Favorito</button>
-
-<button class="like">👍</button>
 
 </div>
 
@@ -116,21 +113,26 @@ mas juntos descobrem o poder do amor verdadeiro.
 <div class="cards">
 
 <div class="card">
-<img src="images/image1.jpeg">
+<img src="images/WhatsApp Image 2026-03-14 at 14.24.05 (1).jpeg">
 <h3>Temporada 1</h3>
 <p>O início da nossa história.</p>
 </div>
 
 <div class="card">
-<img src="images/image3.jpeg">
+<img src="images/WhatsApp Image 2026-03-14 at 14.24.05.jpeg">
 <h3>Temporada 2</h3>
 <p>Momentos inesquecíveis juntos.</p>
 </div>
 
 <div class="card">
-<img src="images/image5.jpeg">
+<img src="images/WhatsApp Image 2026-03-14 at 14.44.17.jpeg">
 <h3>Temporada 3</h3>
 <p>3 anos de amor verdadeiro.</p>
+</div>
+
+<div class="card">
+<h3>Temporada 4</h3>
+<p>Continua...</p>
 </div>
 
 </div>
@@ -142,9 +144,9 @@ mas juntos descobrem o poder do amor verdadeiro.
 
 <div id="videoContainer">
 
-<video controls autoplay playsinline preload="auto">
+<video id="videoPlayer" controls playsinline preload="none">
 
-<source src="images/video.mp4" type="video/mp4">
+<source src="images/WhatsApp Video 2026-03-14 at 12.10.29.mp4" type="video/mp4">
 
 </video>
 
@@ -180,12 +182,15 @@ document.querySelector(".hero").style.display="none"
 document.querySelector(".momentos").style.display="none"
 document.querySelector(".temporadasContainer").style.display="none"
 
+let video = document.getElementById("videoPlayer")
+
 document.getElementById("videoContainer").style.display="flex"
+
+video.play()
 
 }
 
 </script>
-
 
 </body>
 </html>

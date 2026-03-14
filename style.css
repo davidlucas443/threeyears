@@ -1,7 +1,6 @@
 body{
-background:#000;
 margin:0;
-background:#141414;
+background:#000;
 color:white;
 font-family:Arial;
 
@@ -208,7 +207,7 @@ background:#f40612;
 
 .favorito{
 
-background:#333;
+background:#000;
 color:white;
 
 }
@@ -246,16 +245,23 @@ margin-top:10px;
 
 .galeria img{
 
-height:110px;
+width:120px;
+height:160px;
+
+object-fit:cover;
+
 border-radius:6px;
 
-transition:transform 0.3s;
+filter:brightness(0.65);
+
+transition:0.3s;
 
 }
 
 .galeria img:hover{
 
-transform:scale(1.1);
+transform:scale(1.08);
+filter:brightness(1);
 
 }
 
@@ -351,28 +357,19 @@ display:none;
 
 .momentos{
 
-padding:15px;
+padding:20px;
 
 background:linear-gradient(
 to bottom,
-#141414,
-#0d0d0d,
-#000
+rgba(0,0,0,0.95),
+rgba(0,0,0,1)
 );
 
 }
 
 .temporadasContainer{
 
-padding:15px;
-
-background:#000;
-
-}
-
-.temporadasContainer{
-
-padding:15px;
+padding:20px;
 
 background:#000;
 
