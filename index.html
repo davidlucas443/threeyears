@@ -14,11 +14,16 @@
 
 <body>
 
-    <div id="intro" class="intro">
-    <h1 class="tudum">NETFLIX</h1>
+<!-- INTRO -->
+
+<div id="intro" class="intro">
+<h1 class="tudum">DAVID & THAINA</h1>
 </div>
 
 <audio id="tudumSound" src="images/tudum.mp3"></audio>
+
+
+<!-- HEADER -->
 
 <header>
 
@@ -34,10 +39,11 @@
 </header>
 
 
+<!-- HERO -->
+
 <section class="hero">
 
 <img class="capa" src="images/imageP.jpeg">
-
 
 <div class="conteudo">
 
@@ -52,7 +58,6 @@
 <div class="subinfo">
 
 <span class="temporadas">3 TEMPORADAS</span>
-
 <span class="estrelas">★★★★★</span>
 
 </div>
@@ -60,9 +65,6 @@
 <span>26 de março</span>
 
 </div>
-
-
-
 
 <p class="descricao">
 
@@ -87,6 +89,8 @@ mas juntos descobrem o poder do amor verdadeiro.
 </section>
 
 
+<!-- GALERIA -->
+
 <section class="momentos">
 
 <h2>Nossos Melhores Momentos</h2>
@@ -104,63 +108,89 @@ mas juntos descobrem o poder do amor verdadeiro.
 
 </section>
 
-<div id="intro" class="intro">
-    <h1 class="tudum">NETFLIX</h1>
+
+<!-- TEMPORADAS -->
+
+<section class="temporadasContainer">
+
+<h2>Temporadas</h2>
+
+<div class="cards">
+
+<div class="card">
+<img src="images/image1.jpeg">
+<h3>Temporada 1</h3>
+<p>O início da nossa história.</p>
 </div>
+
+<div class="card">
+<img src="images/image3.jpeg">
+<h3>Temporada 2</h3>
+<p>Momentos inesquecíveis juntos.</p>
+</div>
+
+<div class="card">
+<img src="images/image5.jpeg">
+<h3>Temporada 3</h3>
+<p>3 anos de amor verdadeiro.</p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- VIDEO -->
 
 <div id="videoContainer">
 
-<video controls>
+<video controls autoplay playsinline preload="auto">
 
-    <source src="images/WhatsApp Video 2026-03-14 at 12.10.29.mp4" type="video/mp4">
+<source src="images/WhatsApp Video 2026-03-14 at 12.10.29.mp4" type="video/mp4">
 
 </video>
 
 </div>
 
-<!-- <audio id="tudumSound" src="images/tudum.mp3"></audio> -->
+
+<!-- SCRIPT -->
+
 <script>
 
-    window.onload = function(){
+window.onload = function(){
 
 let intro = document.getElementById("intro")
 let som = document.getElementById("tudumSound")
 
-intro.style.display = "flex"
+intro.style.display="flex"
+
+document.body.addEventListener("click", function(){
 
 som.play().catch(()=>{})
 
+}, { once:true })
+
 setTimeout(function(){
 
-intro.style.display = "none"
+intro.style.display="none"
 
 },2000)
 
 }
+
 
 function assistir(){
 
 document.querySelector(".hero").style.display="none"
 document.querySelector(".momentos").style.display="none"
+document.querySelector(".temporadasContainer").style.display="none"
 
-document.getElementById("intro").style.display="flex"
-
-// let som = document.getElementById("tudumSound")
-// som.currentTime = 0
-// som.play()
-
-setTimeout(function(){
-
-document.getElementById("intro").style.display="none"
 document.getElementById("videoContainer").style.display="flex"
-
-},2000)
 
 }
 
-
-
 </script>
+
 
 </body>
 </html>

@@ -5,6 +5,20 @@ background:#141414;
 color:white;
 font-family:Arial;
 
+animation:fade 1s ease;
+
+}
+
+@keyframes fade{
+
+from{
+opacity:0;
+}
+
+to{
+opacity:1;
+}
+
 }
 
 
@@ -24,8 +38,8 @@ padding:12px 15px;
 
 color:#e50914;
 font-weight:bold;
-font-size:18px;
-text-decoration: none;
+font-size:20px;
+text-decoration:none;
 
 }
 
@@ -44,21 +58,54 @@ font-size:12px;
 
 }
 
+nav a:hover{
+
+color:white;
+
+}
+
 
 /* HERO */
 
 .hero{
 
 padding:15px;
+position:relative;
+
+}
+
+.hero::after{
+
+content:"";
+position:absolute;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+background:linear-gradient(
+to top,
+rgba(0,0,0,0.9),
+rgba(0,0,0,0.4),
+transparent
+);
+
+pointer-events:none;
 
 }
 
 .capa{
 
-width:45%;
+width:100%;
+border-radius:8px;
 margin-bottom:10px;
 
 }
+
+
+/* TEXTO */
 
 .tipo{
 
@@ -79,16 +126,9 @@ margin:5px 0;
 .info{
 
 display:flex;
-flex-direction:column;
-gap:15px;
+flex-wrap:wrap;
+gap:8px;
 font-size:12px;
-
-}
-
-.subinfo{
-
-display:flex;
-gap:15px;
 
 }
 
@@ -137,8 +177,10 @@ button{
 
 border:none;
 padding:10px 15px;
+border-radius:4px;
 font-size:13px;
 cursor:pointer;
+transition:0.3s;
 
 }
 
@@ -146,6 +188,13 @@ cursor:pointer;
 
 background:#e50914;
 color:white;
+font-weight:bold;
+
+}
+
+.assistir:hover{
+
+background:#f40612;
 
 }
 
@@ -174,10 +223,7 @@ padding:15px;
 
 .momentos h2{
 
-font-size:13px;
-margin-top:10px;
-color:#ccc;
-line-height:1.4;
+font-size:16px;
 
 }
 
@@ -192,35 +238,28 @@ margin-top:10px;
 
 .galeria img{
 
-height:87px;
+height:110px;
+border-radius:6px;
+
+transition:transform 0.3s;
+
+}
+
+.galeria img:hover{
+
+transform:scale(1.1);
 
 }
 
 
-/* VIDEO */
-
-#videoContainer{
-
-display:none;
-justify-content:center;
-align-items:center;
-height:100vh;
-background:black;
-
-}
-
-video{
-
-width:100%;
-max-width:500px;
-
-}
+/* INTRO NETFLIX */
 
 .intro{
 
 position:fixed;
 top:0;
 left:0;
+
 width:100%;
 height:100vh;
 
@@ -261,6 +300,27 @@ transform:scale(1);
 opacity:1;
 }
 
+}
+
+
+/* VIDEO */
+
+#videoContainer{
+
+display:none;
+justify-content:center;
+align-items:center;
+height:100vh;
+background:black;
+
+}
+
+video{
+
+width:100%;
+max-width:500px;
+
 
 
 }
+
