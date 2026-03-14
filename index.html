@@ -98,18 +98,21 @@ mas juntos descobrem o poder do amor verdadeiro.
 
 </section>
 
+<div id="intro" class="intro">
+    <h1 class="tudum">NETFLIX</h1>
+</div>
 
 <div id="videoContainer">
 
 <video controls>
 
-<source src="images/WhatsApp Video 2026-03-14 at 12.10.29.mp4" type="video/mp4">
+    <source src="images/WhatsApp Video 2026-03-14 at 12.10.29.mp4" type="video/mp4">
 
 </video>
 
 </div>
 
-
+<audio id="tudumSound" src="images/tudum.mp3"></audio>
 <script>
 
 function assistir(){
@@ -117,9 +120,22 @@ function assistir(){
 document.querySelector(".hero").style.display="none"
 document.querySelector(".momentos").style.display="none"
 
+document.getElementById("intro").style.display="flex"
+
+let som = document.getElementById("tudumSound")
+som.currentTime = 0
+som.play()
+
+setTimeout(function(){
+
+document.getElementById("intro").style.display="none"
 document.getElementById("videoContainer").style.display="flex"
 
+},2000)
+
 }
+
+
 
 </script>
 
