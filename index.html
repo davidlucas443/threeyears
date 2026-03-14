@@ -14,6 +14,12 @@
 
 <body>
 
+    <div id="intro" class="intro">
+    <h1 class="tudum">NETFLIX</h1>
+</div>
+
+<audio id="tudumSound" src="images/tudum.mp3"></audio>
+
 <header>
 
 <a href="index.html" id="logo">NETFLIX</a>
@@ -112,8 +118,25 @@ mas juntos descobrem o poder do amor verdadeiro.
 
 </div>
 
-<audio id="tudumSound" src="images/tudum.mp3"></audio>
+<!-- <audio id="tudumSound" src="images/tudum.mp3"></audio> -->
 <script>
+
+    window.onload = function(){
+
+let intro = document.getElementById("intro")
+let som = document.getElementById("tudumSound")
+
+intro.style.display = "flex"
+
+som.play().catch(()=>{})
+
+setTimeout(function(){
+
+intro.style.display = "none"
+
+},2000)
+
+}
 
 function assistir(){
 
@@ -122,9 +145,9 @@ document.querySelector(".momentos").style.display="none"
 
 document.getElementById("intro").style.display="flex"
 
-let som = document.getElementById("tudumSound")
-som.currentTime = 0
-som.play()
+// let som = document.getElementById("tudumSound")
+// som.currentTime = 0
+// som.play()
 
 setTimeout(function(){
 
