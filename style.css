@@ -1,5 +1,5 @@
 body{
-
+background:#000;
 margin:0;
 background:#141414;
 color:white;
@@ -66,19 +66,28 @@ color:white;
 
 
 /* HERO */
-
 .hero{
 
-padding:15px;
 position:relative;
+
+height:260px;
+
+background-image:url("images/imageP.jpeg");
+background-size:cover;
+background-position:center;
+
+display:flex;
+align-items:flex-end;
+
+padding:15px;
 
 }
 
 .hero::after{
 
 content:"";
-position:absolute;
 
+position:absolute;
 top:0;
 left:0;
 
@@ -87,20 +96,19 @@ height:100%;
 
 background:linear-gradient(
 to top,
-rgba(0,0,0,0.9),
-rgba(0,0,0,0.4),
-transparent
+rgba(0,0,0,0.95),
+rgba(0,0,0,0.5),
+rgba(0,0,0,0)
 );
 
 pointer-events:none;
 
 }
 
-.capa{
+.conteudo{
 
-width:100%;
-border-radius:8px;
-margin-bottom:10px;
+position:relative;
+z-index:2;
 
 }
 
@@ -341,3 +349,31 @@ margin-left: 20px;
 display:none;
 }
 
+.momentos{
+
+padding:15px;
+
+background:linear-gradient(
+to bottom,
+#141414,
+#0d0d0d,
+#000
+);
+
+}
+
+.temporadasContainer{
+
+padding:15px;
+
+background:#000;
+
+}
+
+.temporadasContainer{
+
+padding:15px;
+
+background:#000;
+
+}
