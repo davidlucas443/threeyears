@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>David & Thaina</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">NETFLIX</div>
+
+<nav>
+<a href="#">Início</a>
+<a href="#">Séries</a>
+<a href="#">Filmes</a>
+<a href="#">Minha lista</a>
+</nav>
+
+</header>
+
+
+<section class="hero">
+
+<img class="capa" src="images/imageP.jpeg">
+
+
+<div class="conteudo">
+
+<p class="tipo">UMA SÉRIE ORIGINAL NETFLIX</p>
+
+<h1 class="titulo">David e Thaina</h1>
+
+<div class="info">
+
+<span class="juntos">Juntos desde 2023</span>
+
+<div class="subinfo">
+
+<span class="temporadas">3 TEMPORADAS</span>
+
+<span class="estrelas">★★★★★</span>
+
+</div>
+
+<span>26 de março</span>
+
+</div>
+
+
+
+
+<p class="descricao">
+
+David e Thaina são dois corações que se encontram em meio a um mundo turbulento,
+mas juntos descobrem o poder do amor verdadeiro.
+
+</p>
+
+
+<div class="botoes">
+
+<button class="assistir" onclick="assistir()">▶ Assistir</button>
+
+<button class="favorito">✓ Favorito</button>
+
+<button class="like">👍</button>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="momentos">
+
+<h2>Nossos Melhores Momentos</h2>
+
+<div class="galeria">
+
+<img src="images/image1.jpeg">
+<img src="images/image2.jpeg">
+<img src="images/image3.jpeg">
+<img src="images/image4.jpeg">
+<img src="images/image5.jpeg">
+<img src="images/image6.jpeg">
+
+</div>
+
+</section>
+
+
+<div id="videoContainer">
+
+<video controls>
+
+<source src="images/WhatsApp Video 2026-03-14 at 12.10.29.mp4" type="video/mp4">
+
+</video>
+
+</div>
+
+
+<script>
+
+function assistir(){
+
+document.querySelector(".hero").style.display="none"
+document.querySelector(".momentos").style.display="none"
+
+document.getElementById("videoContainer").style.display="flex"
+
+}
+
+</script>
+
+</body>
+</html>
